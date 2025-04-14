@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "backend_sc.Controllers.PessoaController",
+    "Method": "Get",
+    "RelativePath": "Pessoa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
