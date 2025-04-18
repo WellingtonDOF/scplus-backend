@@ -10,6 +10,11 @@ namespace backend_sc.Configurations
         {
             builder.HasIndex(p => p.Cpf)
                 .IsUnique();
+
+            builder.HasOne(p => p.Permissao)
+                .WithMany()
+                .HasForeignKey(p => p.PermissaoId)
+                .IsRequired();  
         }
     }
 }

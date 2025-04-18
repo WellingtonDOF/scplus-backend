@@ -1,4 +1,6 @@
 using backend_sc.DataContext;
+using backend_sc.Security;
+using backend_sc.Services.PessoaService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,12 +12,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Interfaces/Services
+builder.Services.AddScoped<IPessoaInterface, PessoaService>();
+
+//Security
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+
 
 //parte do banco de dados
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")));
 });
+
+//AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 
 var app = builder.Build();

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace backend_sc.Models
@@ -41,11 +43,8 @@ namespace backend_sc.Models
         [Required]
         public bool Status { get; set; }
 
-        //Campos para segurança da senha:
         [Required]
         public string SenhaHash { get; set; }
-        [Required]
-        public string SenhaSalt { get; set; }
 
         //Propriedade de navegação para a entidade permissão (traz eficiência) 
         public PermissaoModel Permissao { get; set; }
