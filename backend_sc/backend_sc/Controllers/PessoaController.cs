@@ -1,24 +1,31 @@
-﻿using backend_sc.Services.PessoaService;
+﻿using backend_sc.DTOs.PessoaDTO;
+using backend_sc.Models;
+using backend_sc.Services.PessoaService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_sc.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("api/[Controller]")]
     public class PessoaController : ControllerBase
     {
 
-        private readonly IPessoaInterface _pessoaService;
+        private readonly IPessoaInterface _pessoaInterface;
         public PessoaController(IPessoaInterface pessoaInterface) 
         {
-            _pessoaService = pessoaInterface;   
+            _pessoaInterface = pessoaInterface;   
         }
 
         [HttpGet]
-        public ActionResult GetPessoas()
+        public async Task<ActionResult<ServiceResponse<List<PessoaResponseDTO>>>> GetPessoas()
         {
-            return Ok("teste");
+            return Ok( await _pessoaInterface.GetPessoas());
         }
 
+        [HttpPost]
+        public async Task<ActionResult<ServiceResponse<PessoaResponseDTO>>> CreatePessoa(PessoaCreateDTO newPessoa)
+        {
+            return Ok(await _pessoaInterface.CreatePessoa(newPessoa));
+        }
     }
 }
