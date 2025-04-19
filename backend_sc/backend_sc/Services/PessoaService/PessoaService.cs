@@ -37,7 +37,8 @@ namespace backend_sc.Services.PessoaService
 
                 var pessoaMapeada = _mapper.Map<PessoaModel>(newPessoa);
      
-                pessoaMapeada.SenhaHash = _passwordHasher.Hash(newPessoa.Senha);
+                pessoaMapeada.Senha = _passwordHasher.Hash(newPessoa.Senha);
+                pessoaMapeada.Status = true;
 
                 _context.Add(pessoaMapeada);
                 await _context.SaveChangesAsync();
@@ -59,14 +60,40 @@ namespace backend_sc.Services.PessoaService
             return serviceResponse;
         }
 
-        public Task<ServiceResponse<PessoaModel>> DeletePessoa(int id)
+        public Task<ServiceResponse<bool>> DeletePessoa(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<PessoaModel>> GetPessoaById(int id)
+        public async Task<ServiceResponse<PessoaResponseDTO>> GetPessoaById(int id)
         {
-            throw new NotImplementedException();
+            ServiceResponse<PessoaResponseDTO> serviceResponse = new ServiceResponse<PessoaResponseDTO>();
+
+            try
+            {
+                var pessoaMapeada = await _context.Pessoas
+                        .Include(p => p.Permissao)
+                        .FirstOrDefaultAsync(p => p.Id == id);
+
+                if(pessoaMapeada == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Erro ao encontrar usuário";
+                    serviceResponse.Sucesso=false;
+
+                    return serviceResponse;
+                }
+
+                var pessoaResposta = _mapper.Map<PessoaResponseDTO>(pessoaMapeada);
+                serviceResponse.Dados = pessoaResposta;
+                serviceResponse.Mensagem = "Dados obtidos com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
         }
 
         public async Task<ServiceResponse<List<PessoaResponseDTO>>> GetPessoas()
@@ -75,6 +102,7 @@ namespace backend_sc.Services.PessoaService
 
             try
             {
+
                 var pessoasModel = await _context.Pessoas.Include(p => p.Permissao).ToListAsync(); 
 
                 var pessoasResposta = _mapper.Map<List<PessoaResponseDTO>>(pessoasModel);
@@ -84,6 +112,7 @@ namespace backend_sc.Services.PessoaService
                 if (serviceResponse.Dados == null || serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado!";
+                    return serviceResponse;
                 }
 
                 serviceResponse.Mensagem = "Dados obtidos com sucesso!";
@@ -97,12 +126,36 @@ namespace backend_sc.Services.PessoaService
             return serviceResponse;
         }
 
-        public Task<ServiceResponse<PessoaModel>> InativaPessoa(int id)
+        public async Task<ServiceResponse<PessoaResponseDTO>> InativarPessoa(int id)
         {
-            throw new NotImplementedException();
+            ServiceResponse<PessoaResponseDTO> serviceResponse = new ServiceResponse<PessoaResponseDTO>();
+
+            try
+            {
+                var pessoaMapeada = await _context.Pessoas.FindAsync(id);
+
+                if (pessoaMapeada == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Erro ao encontrar usuário";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                pessoaMapeada.Status = false;
+                await _context.SaveChangesAsync();
+                serviceResponse.Mensagem = "Inativação concluida!";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
         }
 
-        public Task<ServiceResponse<PessoaModel>> UpdatePessoa(PessoaModel editPessoa)
+        public Task<ServiceResponse<PessoaResponseDTO>> UpdatePessoa(PessoaModel editPessoa)
         {
             throw new NotImplementedException();
         }

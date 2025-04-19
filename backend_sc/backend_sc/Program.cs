@@ -1,19 +1,28 @@
+using backend_sc.Configurations;
 using backend_sc.DataContext;
 using backend_sc.Security;
+using backend_sc.Services.AlunoService;
 using backend_sc.Services.PessoaService;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    //Configurando rotas para minusculas 
+    options.Conventions.Add(new RouteTokenTransformerConvention(new LowercaseControllerRoute()));
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Interfaces/Services
 builder.Services.AddScoped<IPessoaInterface, PessoaService>();
+builder.Services.AddScoped<IAlunoInterface, AlunoService>();
 
 //Security
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
@@ -43,5 +52,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

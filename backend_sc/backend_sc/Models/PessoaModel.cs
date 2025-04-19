@@ -44,7 +44,7 @@ namespace backend_sc.Models
         public bool Status { get; set; }
 
         [Required]
-        public string SenhaHash { get; set; }
+        public string Senha { get; set; }
 
         //Propriedade de navegação para a entidade permissão (traz eficiência) 
         public PermissaoModel Permissao { get; set; }

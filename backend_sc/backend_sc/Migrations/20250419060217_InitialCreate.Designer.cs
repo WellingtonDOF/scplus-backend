@@ -12,8 +12,8 @@ using backend_sc.DataContext;
 namespace backend_sc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250418082459_RemoveSenhaSaltColumn")]
-    partial class RemoveSenhaSaltColumn
+    [Migration("20250419060217_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,23 @@ namespace backend_sc.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Permissoes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            TipoPermissao = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            TipoPermissao = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            TipoPermissao = 2
+                        });
                 });
 
             modelBuilder.Entity("backend_sc.Models.PessoaModel", b =>
@@ -75,7 +92,7 @@ namespace backend_sc.Migrations
                     b.Property<int>("PermissaoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SenhaHash")
+                    b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -103,7 +120,7 @@ namespace backend_sc.Migrations
                 {
                     b.HasBaseType("backend_sc.Models.PessoaModel");
 
-                    b.Property<string>("CategoriaCnh")
+                    b.Property<string>("CategoriaCnhDesejada")
                         .IsRequired()
                         .HasMaxLength(22)
                         .HasColumnType("varchar(22)");
@@ -128,6 +145,11 @@ namespace backend_sc.Migrations
 
                     b.Property<DateTime>("DataAdmissao")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<int>("PessoaId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("PessoaId");
 
                     b.ToTable("Instrutores", (string)null);
                 });
@@ -159,6 +181,14 @@ namespace backend_sc.Migrations
                         .HasForeignKey("backend_sc.Models.InstrutorModel", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("backend_sc.Models.PessoaModel", "Pessoa")
+                        .WithMany()
+                        .HasForeignKey("PessoaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pessoa");
                 });
 #pragma warning restore 612, 618
         }

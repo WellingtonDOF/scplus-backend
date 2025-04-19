@@ -22,10 +22,25 @@ namespace backend_sc.Controllers
             return Ok( await _pessoaInterface.GetPessoas());
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ServiceResponse<PessoaResponseDTO>>> GetPessoaById(int id)
+        {
+            return Ok(await _pessoaInterface.GetPessoaById(id));
+        }
+
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<PessoaResponseDTO>>> CreatePessoa(PessoaCreateDTO newPessoa)
         {
             return Ok(await _pessoaInterface.CreatePessoa(newPessoa));
         }
+
+        [HttpPut("inativar/{id}")]
+        public async Task<ActionResult<ServiceResponse<PessoaResponseDTO>>> InativarPessoa(int id)
+        {
+            return Ok(await _pessoaInterface.InativarPessoa(id));
+        }
+
+
+
     }
 }

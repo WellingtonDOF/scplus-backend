@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using backend_sc.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace backend_sc.DTOs.PessoaDTO
 {
@@ -12,5 +13,6 @@ namespace backend_sc.DTOs.PessoaDTO
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
         public string TipoUsuario { get; set; }
+        public string Status { get; set; }
     }
 }

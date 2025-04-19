@@ -1,4 +1,4 @@
-﻿using backend_sc.Enums; 
+﻿using backend_sc.Enums;
 public static class PermissaoConfig
 {
     public static Dictionary<TipoPermissaoEnum, int> TipoParaId = new Dictionary<TipoPermissaoEnum, int>()

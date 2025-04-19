@@ -1,4 +1,5 @@
 ﻿using backend_sc.Configurations;
+using backend_sc.Enums;
 using backend_sc.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +29,12 @@ namespace backend_sc.DataContext
 
             //Configuração de Pessoa
             modelBuilder.ApplyConfiguration(new PessoaConfiguration());
+
+            //Cria as permissões sempre que o banco for criado
+            modelBuilder.Entity<PermissaoModel>().HasData(
+            new PermissaoModel { Id = 1, TipoPermissao = TipoPermissaoEnum.Aluno },
+            new PermissaoModel { Id = 2, TipoPermissao = TipoPermissaoEnum.Instrutor },
+            new PermissaoModel { Id = 3, TipoPermissao = TipoPermissaoEnum.Admin });
         }
     }
 }

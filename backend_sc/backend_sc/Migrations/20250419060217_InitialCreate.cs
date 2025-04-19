@@ -4,10 +4,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace backend_sc.Migrations
 {
     /// <inheritdoc />
-    public partial class firstmigration : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -48,9 +50,7 @@ namespace backend_sc.Migrations
                     DataNascimento = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     PermissaoId = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    SenhaHash = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    SenhaSalt = table.Column<string>(type: "longtext", nullable: false)
+                    Senha = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -70,7 +70,7 @@ namespace backend_sc.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    CategoriaCnh = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
+                    CategoriaCnhDesejada = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     StatusPagamento = table.Column<int>(type: "int", nullable: false),
                     StatusCurso = table.Column<bool>(type: "tinyint(1)", nullable: false)
@@ -94,7 +94,8 @@ namespace backend_sc.Migrations
                     Id = table.Column<int>(type: "int", nullable: false),
                     CategoriaCnh = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataAdmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    DataAdmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    PessoaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,8 +106,29 @@ namespace backend_sc.Migrations
                         principalTable: "Pessoas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Instrutores_Pessoas_PessoaId",
+                        column: x => x.PessoaId,
+                        principalTable: "Pessoas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "Permissoes",
+                columns: new[] { "Id", "TipoPermissao" },
+                values: new object[,]
+                {
+                    { 1, 0 },
+                    { 2, 1 },
+                    { 3, 2 }
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Instrutores_PessoaId",
+                table: "Instrutores",
+                column: "PessoaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pessoas_Cpf",
