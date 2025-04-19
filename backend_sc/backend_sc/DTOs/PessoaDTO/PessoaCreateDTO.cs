@@ -32,7 +32,6 @@ namespace backend_sc.DTOs.PessoaDTO
         [Required]
         public string TipoUsuario { get; set; }
 
-        //Campos para segurança da senha:
         [Required]
         public string Senha { get; set; }
     }

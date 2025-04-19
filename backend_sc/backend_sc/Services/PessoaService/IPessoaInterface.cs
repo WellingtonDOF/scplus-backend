@@ -7,9 +7,9 @@ namespace backend_sc.Services.PessoaService
     {
         Task<ServiceResponse<List<PessoaResponseDTO>>> GetPessoas();
         Task<ServiceResponse<PessoaResponseDTO>> CreatePessoa(PessoaCreateDTO newPessoa);
-        Task<ServiceResponse<PessoaModel>> GetPessoaById(int id);
-        Task<ServiceResponse<PessoaModel>> UpdatePessoa(PessoaModel editPessoa);
-        Task<ServiceResponse<PessoaModel>> DeletePessoa(int id);
-        Task<ServiceResponse<PessoaModel>> InativaPessoa(int id);
+        Task<ServiceResponse<PessoaResponseDTO>> GetPessoaById(int id);
+        Task<ServiceResponse<PessoaResponseDTO>> UpdatePessoa(PessoaModel editPessoa);
+        Task<ServiceResponse<bool>> DeletePessoa(int id);
+        Task<ServiceResponse<PessoaResponseDTO>> InativarPessoa(int id);
     }
 }
