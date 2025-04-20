@@ -2,8 +2,11 @@
 using backend_sc.DataContext;
 using backend_sc.DTOs.AlunoDTO;
 using backend_sc.DTOs.PessoaDTO;
+using backend_sc.Enums;
 using backend_sc.Models;
+using backend_sc.Services.PessoaService;
 using Microsoft.EntityFrameworkCore;
+using backend_sc.Security;
 
 namespace backend_sc.Services.AlunoService
 {
@@ -11,16 +14,63 @@ namespace backend_sc.Services.AlunoService
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public AlunoService(ApplicationDbContext context, IMapper mapper)
+        public AlunoService(ApplicationDbContext context, IMapper mapper, IPasswordHasher passwordHasher)
         {
             _context = context;
             _mapper = mapper;
+            _passwordHasher = passwordHasher;
         }
 
-        public Task<ServiceResponse<AlunoResponseDTO>> CreateAluno(AlunoCreateDTO newAluno)
+        public async Task<ServiceResponse<AlunoResponseDTO>> CreateAluno(AlunoCreateDTO newAluno)
         {
-            throw new NotImplementedException();
+            var serviceResponse = new ServiceResponse<AlunoResponseDTO>();
+
+            try
+            {
+                if (newAluno == null)
+                {
+                    serviceResponse.Sucesso = false;
+                    serviceResponse.Mensagem = "Dados inválidos!";
+                    return serviceResponse;
+                }
+
+                var pessoaExistente = await _context.Pessoas.FirstOrDefaultAsync(p => p.Cpf == newAluno.Cpf);
+
+                if (pessoaExistente != null)
+                {
+                    serviceResponse.Sucesso = false;
+                    serviceResponse.Mensagem = $"O CPF '{newAluno.Cpf}' já está cadastrado!";
+                    return serviceResponse;
+                }
+
+                var alunoModel = _mapper.Map<AlunoModel>(newAluno);
+                alunoModel.Senha = _passwordHasher.Hash(newAluno.Senha); 
+                alunoModel.Status= true;
+
+                alunoModel.StatusPagamento = StatusPagamentoEnum.Pendente;
+                alunoModel.StatusCurso = true;
+
+                _context.Alunos.Add(alunoModel);
+                await _context.SaveChangesAsync();
+
+                var alunoComPermissao = await _context.Alunos
+                    .Include(a => a.Permissao) 
+                    .FirstOrDefaultAsync(a => a.Id == alunoModel.Id);
+
+                var alunoResponse = _mapper.Map<AlunoResponseDTO>(alunoComPermissao);
+                serviceResponse.Dados = alunoResponse;
+                serviceResponse.Mensagem = "Aluno criado com sucesso!";
+                serviceResponse.Sucesso = true;
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Sucesso = false;
+                serviceResponse.Mensagem = ex.Message;
+            }
+
+            return serviceResponse;
         }
 
         public Task<ServiceResponse<bool>> DeleteAluno(int id)
@@ -28,9 +78,66 @@ namespace backend_sc.Services.AlunoService
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<AlunoResponseDTO>> GetAlunoById(int id)
+        public async Task<ServiceResponse<AlunoResponseDTO>> GetAlunoByCpf(string cpf)
         {
-            throw new NotImplementedException();
+            ServiceResponse<AlunoResponseDTO> serviceResponse = new ServiceResponse<AlunoResponseDTO>();
+
+            try
+            {
+                var alunoMapeado = await _context.Alunos
+                    .Include(a => a.Permissao)
+                    .FirstOrDefaultAsync(p => p.Cpf == cpf);
+
+                if (alunoMapeado == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Erro ao encontrar usuário";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                var alunoResposta = _mapper.Map<AlunoResponseDTO>(alunoMapeado);
+                serviceResponse.Dados = alunoResposta;
+                serviceResponse.Mensagem = "Dados obtidos com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
+        }
+
+        public async Task<ServiceResponse<AlunoResponseDTO>> GetAlunoById(int id)
+        {
+            ServiceResponse<AlunoResponseDTO> serviceResponse = new ServiceResponse<AlunoResponseDTO>();
+
+            try
+            {
+                var alunoMapeado = await _context.Alunos
+                    .Include(a => a.Permissao)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (alunoMapeado == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Erro ao encontrar usuário";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                var alunoResposta = _mapper.Map<AlunoResponseDTO>(alunoMapeado);
+                serviceResponse.Dados = alunoResposta;
+                serviceResponse.Mensagem = "Dados obtidos com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
         }
 
         public async Task<ServiceResponse<List<AlunoResponseDTO>>> GetAlunos()
@@ -62,14 +169,71 @@ namespace backend_sc.Services.AlunoService
             return serviceResponse;
         }
 
-        public Task<ServiceResponse<AlunoResponseDTO>> InativaAluno(int id)
+        public async Task<ServiceResponse<AlunoResponseDTO>> InativarAluno(int id)
         {
-            throw new NotImplementedException();
+            ServiceResponse<AlunoResponseDTO> serviceResponse = new ServiceResponse<AlunoResponseDTO>();
+
+            try
+            {
+                var alunoMapeado = await _context.Alunos.FindAsync(id);
+
+                if (alunoMapeado == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Erro ao encontrar usuário";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                alunoMapeado.Status = false;
+                await _context.SaveChangesAsync();
+                serviceResponse.Mensagem = "Inativação concluida!";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
         }
 
-        public Task<ServiceResponse<AlunoResponseDTO>> UpdateAluno(AlunoModel editAluno)
+        public async Task<ServiceResponse<AlunoResponseDTO>> UpdateAluno(int id, AlunoUpdateDTO editAluno)
         {
-            throw new NotImplementedException();
+            ServiceResponse<AlunoResponseDTO> serviceResponse = new ServiceResponse<AlunoResponseDTO>();
+
+            try
+            {
+                var alunoMapeado = await _context.Alunos
+                    .Include(a => a.Permissao)
+                    .FirstOrDefaultAsync(a => a.Id == id);
+
+                if (alunoMapeado == null)
+                {
+                    serviceResponse.Sucesso = false;
+                    serviceResponse.Mensagem = "Aluno não encontrado.";
+                    return serviceResponse;
+                }
+
+                _mapper.Map(editAluno, alunoMapeado);
+                // Lógica adicional, como hash de senha se a senha foi alterada
+                if (!string.IsNullOrEmpty(editAluno.Senha))
+                {
+                    alunoMapeado.Senha = _passwordHasher.Hash(editAluno.Senha);
+                }
+
+                _context.Alunos.Update(alunoMapeado);
+                await _context.SaveChangesAsync();
+
+                serviceResponse.Dados = _mapper.Map<AlunoResponseDTO>(alunoMapeado);
+                serviceResponse.Mensagem = "Aluno atualizado com sucesso.";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
         }
     }
 }

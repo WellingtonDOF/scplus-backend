@@ -9,8 +9,9 @@ namespace backend_sc.Services.AlunoService
         Task<ServiceResponse<List<AlunoResponseDTO>>> GetAlunos();
         Task<ServiceResponse<AlunoResponseDTO>> CreateAluno(AlunoCreateDTO newAluno);
         Task<ServiceResponse<AlunoResponseDTO>> GetAlunoById(int id);
-        Task<ServiceResponse<AlunoResponseDTO>> UpdateAluno(AlunoModel editAluno);
+        Task<ServiceResponse<AlunoResponseDTO>> GetAlunoByCpf(string cpf);
+        Task<ServiceResponse<AlunoResponseDTO>> UpdateAluno(int id, AlunoUpdateDTO editAluno);
         Task<ServiceResponse<bool>> DeleteAluno(int id);
-        Task<ServiceResponse<AlunoResponseDTO>> InativaAluno(int id);
+        Task<ServiceResponse<AlunoResponseDTO>> InativarAluno(int id);
     }
 }

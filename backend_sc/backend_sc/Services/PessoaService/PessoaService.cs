@@ -5,6 +5,7 @@ using backend_sc.Enums;
 using backend_sc.Models;
 using backend_sc.Security;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace backend_sc.Services.PessoaService
 {
@@ -23,38 +24,34 @@ namespace backend_sc.Services.PessoaService
 
         public async Task<ServiceResponse<PessoaResponseDTO>> CreatePessoa(PessoaCreateDTO newPessoa)
         {
-            ServiceResponse<PessoaResponseDTO> serviceResponse = new ServiceResponse<PessoaResponseDTO>();
+            var serviceResponse = new ServiceResponse<PessoaResponseDTO>();
             try
             {
-                if(newPessoa == null)
+                if (newPessoa == null)
                 {
-                    serviceResponse.Dados = null;
-                    serviceResponse.Mensagem = "Informar dados!";
                     serviceResponse.Sucesso = false;
-
+                    serviceResponse.Mensagem = "Dados inválidos!";
                     return serviceResponse;
                 }
 
                 var pessoaMapeada = _mapper.Map<PessoaModel>(newPessoa);
-     
                 pessoaMapeada.Senha = _passwordHasher.Hash(newPessoa.Senha);
                 pessoaMapeada.Status = true;
 
-                _context.Add(pessoaMapeada);
+                _context.Pessoas.Add(pessoaMapeada);
+
+                // Só salva imediatamente se NÃO houver uma transação externa
                 await _context.SaveChangesAsync();
 
-                var pessoaComPermissao = await _context.Pessoas
-                    .Include(p => p.Permissao)
-                    .FirstOrDefaultAsync(p => p.Id == pessoaMapeada.Id);
-
-                var pessoaResposta = _mapper.Map<PessoaResponseDTO>(pessoaComPermissao);
+                var pessoaResposta = _mapper.Map<PessoaResponseDTO>(pessoaMapeada);
                 serviceResponse.Dados = pessoaResposta;
                 serviceResponse.Mensagem = "Pessoa criada com sucesso!";
+                serviceResponse.Sucesso = true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                serviceResponse.Mensagem = ex.Message;
                 serviceResponse.Sucesso = false;
+                serviceResponse.Mensagem = ex.Message;
             }
 
             return serviceResponse;
