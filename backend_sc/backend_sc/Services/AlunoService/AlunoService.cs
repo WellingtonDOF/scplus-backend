@@ -178,7 +178,7 @@ namespace backend_sc.Services.AlunoService
                 var alunoMapeado = await _context.Alunos
                     .Include(a => a.Permissao)
                     .FirstOrDefaultAsync(a => a.Id == id);
-
+                    
                 if (alunoMapeado == null)
                 {
                     serviceResponse.Dados = null;

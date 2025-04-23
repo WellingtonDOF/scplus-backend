@@ -22,6 +22,7 @@
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ? "Ativo" : "Inativo"));
 
             // ALUNO MAPEAMENTO
+
             CreateMap<AlunoCreateDTO, AlunoModel>()
                 .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a senha plain text
                 .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario))
@@ -48,7 +49,7 @@
 
             CreateMap<InstrutorModel, InstrutorResponseDTO>()
                 .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.Permissao.TipoPermissao.ToString()))
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ? "Ativo" : "Inativo"));
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status? "Ativo" : "Inativo")); 
         }
     }
 }

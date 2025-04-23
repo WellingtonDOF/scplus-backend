@@ -17,6 +17,7 @@ namespace backend_sc.DTOs.PessoaDTO
         [MaxLength(22)]
         public string Telefone { get; set; }
 
+
         [Required]
         [EmailAddress]
         [MaxLength(150)]
