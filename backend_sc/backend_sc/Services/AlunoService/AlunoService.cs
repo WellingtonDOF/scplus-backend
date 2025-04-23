@@ -61,7 +61,7 @@ namespace backend_sc.Services.AlunoService
 
                 var alunoResponse = _mapper.Map<AlunoResponseDTO>(alunoComPermissao);
                 serviceResponse.Dados = alunoResponse;
-                serviceResponse.Mensagem = "Aluno criado com sucesso!";
+                serviceResponse.Mensagem = "Usuário criado com sucesso!";
                 serviceResponse.Sucesso = true;
             }
             catch (Exception ex)
@@ -169,13 +169,15 @@ namespace backend_sc.Services.AlunoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<AlunoResponseDTO>> InativarAluno(int id)
+        public async Task<ServiceResponse<AlunoResponseDTO>> MudarStatusAluno(int id)
         {
             ServiceResponse<AlunoResponseDTO> serviceResponse = new ServiceResponse<AlunoResponseDTO>();
 
             try
             {
-                var alunoMapeado = await _context.Alunos.FindAsync(id);
+                var alunoMapeado = await _context.Alunos
+                    .Include(a => a.Permissao)
+                    .FirstOrDefaultAsync(a => a.Id == id);
 
                 if (alunoMapeado == null)
                 {
@@ -186,9 +188,15 @@ namespace backend_sc.Services.AlunoService
                     return serviceResponse;
                 }
 
-                alunoMapeado.Status = false;
+                if (alunoMapeado.Status == true)
+                    alunoMapeado.Status = false;
+                else
+                    alunoMapeado.Status = true;
+
                 await _context.SaveChangesAsync();
-                serviceResponse.Mensagem = "Inativação concluida!";
+
+                serviceResponse.Dados = _mapper.Map<AlunoResponseDTO>(alunoMapeado); ;
+                serviceResponse.Mensagem = $"Mudança para '{(alunoMapeado.Status == true ? "Ativo" : "Inativo")}' concluída!";
             }
             catch (Exception ex)
             {
@@ -211,7 +219,7 @@ namespace backend_sc.Services.AlunoService
                 if (alunoMapeado == null)
                 {
                     serviceResponse.Sucesso = false;
-                    serviceResponse.Mensagem = "Aluno não encontrado.";
+                    serviceResponse.Mensagem = "Usuário não encontrado.";
                     return serviceResponse;
                 }
 
@@ -226,7 +234,7 @@ namespace backend_sc.Services.AlunoService
                 await _context.SaveChangesAsync();
 
                 serviceResponse.Dados = _mapper.Map<AlunoResponseDTO>(alunoMapeado);
-                serviceResponse.Mensagem = "Aluno atualizado com sucesso.";
+                serviceResponse.Mensagem = "Usuário atualizado com sucesso.";
             }
             catch (Exception ex)
             {

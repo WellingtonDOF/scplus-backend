@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace backend_sc.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial_Create : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -94,8 +94,7 @@ namespace backend_sc.Migrations
                     Id = table.Column<int>(type: "int", nullable: false),
                     CategoriaCnh = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataAdmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    PessoaId = table.Column<int>(type: "int", nullable: false)
+                    DataAdmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,12 +102,6 @@ namespace backend_sc.Migrations
                     table.ForeignKey(
                         name: "FK_Instrutores_Pessoas_Id",
                         column: x => x.Id,
-                        principalTable: "Pessoas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Instrutores_Pessoas_PessoaId",
-                        column: x => x.PessoaId,
                         principalTable: "Pessoas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -124,11 +117,6 @@ namespace backend_sc.Migrations
                     { 2, 1 },
                     { 3, 2 }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Instrutores_PessoaId",
-                table: "Instrutores",
-                column: "PessoaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pessoas_Cpf",

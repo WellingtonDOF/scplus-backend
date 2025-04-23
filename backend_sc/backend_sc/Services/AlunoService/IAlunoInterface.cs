@@ -12,6 +12,6 @@ namespace backend_sc.Services.AlunoService
         Task<ServiceResponse<AlunoResponseDTO>> GetAlunoByCpf(string cpf);
         Task<ServiceResponse<AlunoResponseDTO>> UpdateAluno(int id, AlunoUpdateDTO editAluno);
         Task<ServiceResponse<bool>> DeleteAluno(int id);
-        Task<ServiceResponse<AlunoResponseDTO>> InativarAluno(int id);
+        Task<ServiceResponse<AlunoResponseDTO>> MudarStatusAluno(int id);
     }
 }
