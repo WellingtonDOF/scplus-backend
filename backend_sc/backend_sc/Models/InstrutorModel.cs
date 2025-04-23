@@ -5,12 +5,10 @@ namespace backend_sc.Models
 {
     public class InstrutorModel : PessoaModel
     {
+        [Required]
         [MaxLength(22)]
         public string CategoriaCnh { get; set; }
         [Required]
         public DateTime DataAdmissao { get; set; }
-
-        //Propriedade de navegação para a entidade permissão (traz eficiência) 
-        public PessoaModel Pessoa{ get; set; }
     }
 }

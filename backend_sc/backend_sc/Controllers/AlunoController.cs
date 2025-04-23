@@ -41,10 +41,10 @@ namespace backend_sc.Controllers
             return Ok(await _alunoInterface.CreateAluno(newAluno));
         }
 
-        [HttpPut("inativar/{id}")]
-        public async Task<ActionResult<ServiceResponse<AlunoResponseDTO>>> InativarAluno(int id)
+        [HttpPut("mudar-status/{id}")]
+        public async Task<ActionResult<ServiceResponse<AlunoResponseDTO>>> MudarStatusAluno(int id)
         {
-            return Ok(await _alunoInterface.InativarAluno(id));
+            return Ok(await _alunoInterface.MudarStatusAluno(id));
         }
 
         [HttpPatch("{id}")]

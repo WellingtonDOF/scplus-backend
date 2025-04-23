@@ -12,8 +12,8 @@ using backend_sc.DataContext;
 namespace backend_sc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250419060217_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250422233308_Initial_Create")]
+    partial class Initial_Create
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -146,11 +146,6 @@ namespace backend_sc.Migrations
                     b.Property<DateTime>("DataAdmissao")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("PessoaId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("PessoaId");
-
                     b.ToTable("Instrutores", (string)null);
                 });
 
@@ -181,14 +176,6 @@ namespace backend_sc.Migrations
                         .HasForeignKey("backend_sc.Models.InstrutorModel", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("backend_sc.Models.PessoaModel", "Pessoa")
-                        .WithMany()
-                        .HasForeignKey("PessoaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Pessoa");
                 });
 #pragma warning restore 612, 618
         }

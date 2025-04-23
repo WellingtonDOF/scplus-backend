@@ -5,6 +5,7 @@ namespace backend_sc.DTOs.AlunoDTO
 {
     public class AlunoUpdateDTO : PessoaUpdateDTO
     {
+        [Required]
         [MaxLength(22)]
         public string CategoriaCnhDesejada { get; set; }
     }
