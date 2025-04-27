@@ -224,7 +224,8 @@ namespace backend_sc.Services.AlunoService
                 }
 
                 _mapper.Map(editAluno, alunoMapeado);
-                // Lógica adicional, como hash de senha se a senha foi alterada
+
+                //Se a senha foi alterada
                 if (!string.IsNullOrEmpty(editAluno.Senha))
                 {
                     alunoMapeado.Senha = _passwordHasher.Hash(editAluno.Senha);
