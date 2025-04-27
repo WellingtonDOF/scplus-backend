@@ -28,8 +28,9 @@
                 .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario))
                 // Mapeia outras propriedades específicas do aluno
                 .ForMember(dest => dest.CategoriaCnhDesejada, opt => opt.MapFrom(src => src.CategoriaCnhDesejada));
-
+           
             CreateMap<AlunoUpdateDTO, AlunoModel>()
+                .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a propriedade Senha na atualização
                 .ReverseMap();
 
             CreateMap<AlunoModel, AlunoResponseDTO>()

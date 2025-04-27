@@ -23,7 +23,6 @@ namespace backend_sc.DTOs.PessoaDTO
         [MaxLength(150)]
         public string Email { get; set; }
 
-        [Required]
         public string Senha { get; set; }
     }
 }
