@@ -8,7 +8,7 @@ namespace backend_sc.Models
     {
         [Required]
         [MaxLength(22)]
-        public string CategoriaCnhDesejada { get; set; }
+        public string CategoriaCnh { get; set; }
 
         [Required]
         public StatusPagamentoEnum StatusPagamento { get; set; }

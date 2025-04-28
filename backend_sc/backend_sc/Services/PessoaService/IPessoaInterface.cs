@@ -11,6 +11,7 @@ namespace backend_sc.Services.PessoaService
         Task<ServiceResponse<PessoaResponseDTO>> GetPessoaById(int id);
         Task<ServiceResponse<PessoaResponseDTO>> UpdatePessoa(PessoaModel editPessoa);
         Task<ServiceResponse<bool>> DeletePessoa(int id);
+        Task<ServiceResponse<bool>> VerificarCpfExistente(string cpf);
         Task<ServiceResponse<PessoaResponseDTO>> InativarPessoa(int id);
     }
 }
