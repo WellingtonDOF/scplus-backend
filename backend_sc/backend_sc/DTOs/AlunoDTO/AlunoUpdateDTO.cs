@@ -7,6 +7,6 @@ namespace backend_sc.DTOs.AlunoDTO
     {
         [Required]
         [MaxLength(22)]
-        public string CategoriaCnhDesejada { get; set; }
+        public string CategoriaCnh { get; set; }
     }
 }

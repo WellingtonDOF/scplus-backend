@@ -1,5 +1,6 @@
 ﻿using backend_sc.DTOs.PessoaDTO;
 using backend_sc.Models;
+using backend_sc.Services.AlunoService;
 using backend_sc.Services.PessoaService;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,13 @@ namespace backend_sc.Controllers
         public async Task<ActionResult<ServiceResponse<PessoaResponseDTO>>> GetPessoaById(int id)
         {
             return Ok(await _pessoaInterface.GetPessoaById(id));
+        }
+
+
+        [HttpGet("verificar-cpf/{cpf}")]
+        public async Task<ActionResult<bool>> VerificarCpfExistente(string cpf)
+        {
+            return Ok(await _pessoaInterface.VerificarCpfExistente(cpf));
         }
 
         [HttpPost]

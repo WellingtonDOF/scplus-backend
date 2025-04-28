@@ -4,6 +4,7 @@ using backend_sc.Models;
 using backend_sc.Services.AlunoService;
 using backend_sc.Services.PessoaService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend_sc.Controllers
 {
@@ -28,6 +29,7 @@ namespace backend_sc.Controllers
         {
             return Ok(await _alunoInterface.GetAlunoByCpf(cpf));
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<AlunoResponseDTO>>> GetAlunosById(int id)

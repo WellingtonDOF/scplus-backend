@@ -7,6 +7,7 @@ using backend_sc.Models;
 using backend_sc.Services.PessoaService;
 using Microsoft.EntityFrameworkCore;
 using backend_sc.Security;
+using Microsoft.AspNetCore.Mvc;
 
 namespace backend_sc.Services.AlunoService
 {

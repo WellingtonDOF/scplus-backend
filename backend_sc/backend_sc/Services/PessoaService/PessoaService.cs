@@ -93,6 +93,31 @@ namespace backend_sc.Services.PessoaService
             return serviceResponse;
         }
 
+        public async Task<ServiceResponse<bool>> VerificarCpfExistente(string cpf)
+        {
+            ServiceResponse<bool> serviceResponse = new ServiceResponse<bool>();
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(cpf) || cpf.Length != 11 || !cpf.All(char.IsDigit))
+                {
+                    serviceResponse.Sucesso = false;
+                    serviceResponse.Mensagem = "CPF inválido";
+                    return serviceResponse;
+                }
+
+                var existe = await _context.Pessoas.AnyAsync(a => a.Cpf == cpf);
+                serviceResponse.Dados = existe;
+                serviceResponse.Mensagem = existe ? "CPF já cadastrado." : "CPF disponível.";
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+
+            return serviceResponse;
+        }
         public async Task<ServiceResponse<List<PessoaResponseDTO>>> GetPessoas()
         {
             ServiceResponse<List<PessoaResponseDTO>> serviceResponse = new ServiceResponse<List<PessoaResponseDTO>>();

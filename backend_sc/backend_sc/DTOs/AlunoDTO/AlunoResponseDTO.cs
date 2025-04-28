@@ -8,7 +8,7 @@ namespace backend_sc.DTOs.AlunoDTO
         //Só coloquei isso de json para esses 3 campos ficarem por ultimo no retorno da resposta json
 
         [JsonPropertyOrder(1)]
-        public string CategoriaCnhDesejada { get; set; }
+        public string CategoriaCnh { get; set; }
 
         [JsonPropertyOrder(1)]
         public string StatusPagamento { get; set; }

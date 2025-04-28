@@ -27,7 +27,7 @@
                 .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a senha plain text
                 .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario))
                 // Mapeia outras propriedades específicas do aluno
-                .ForMember(dest => dest.CategoriaCnhDesejada, opt => opt.MapFrom(src => src.CategoriaCnhDesejada));
+                .ForMember(dest => dest.CategoriaCnh, opt => opt.MapFrom(src => src.CategoriaCnh));
            
             CreateMap<AlunoUpdateDTO, AlunoModel>()
                 .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a propriedade Senha na atualização
@@ -46,6 +46,7 @@
                 .ForMember(dest => dest.CategoriaCnh, opt => opt.MapFrom(src => src.CategoriaCnh));
 
             CreateMap<InstrutorUpdateDTO, InstrutorModel>()
+                .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a propriedade Senha na atualização
                 .ReverseMap();
 
             CreateMap<InstrutorModel, InstrutorResponseDTO>()
