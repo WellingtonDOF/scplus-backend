@@ -1,7 +1,9 @@
 ﻿namespace backend_sc.Profile
 {
     using AutoMapper;
+    using backend_sc.Configurations;
     using backend_sc.DTOs.AlunoDTO;
+    using backend_sc.DTOs.AulaDTO;
     using backend_sc.DTOs.InstrutorDTO;
     using backend_sc.DTOs.PessoaDTO;
     using backend_sc.Mapping;
@@ -22,13 +24,11 @@
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ? "Ativo" : "Inativo"));
 
             // ALUNO MAPEAMENTO
-
             CreateMap<AlunoCreateDTO, AlunoModel>()
                 .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a senha plain text
                 .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario))
                 // Mapeia outras propriedades específicas do aluno
                 .ForMember(dest => dest.CategoriaCnh, opt => opt.MapFrom(src => src.CategoriaCnh));
-
            
             CreateMap<AlunoUpdateDTO, AlunoModel>()
                 .ForMember(dest => dest.Senha, opt => opt.Ignore()) // Ignora a propriedade Senha na atualização
@@ -52,7 +52,16 @@
 
             CreateMap<InstrutorModel, InstrutorResponseDTO>()
                 .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.Permissao.TipoPermissao.ToString()))
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status? "Ativo" : "Inativo")); 
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status? "Ativo" : "Inativo"));
+
+            // AULA MAPEAMENTO
+            CreateMap<AulaCreateDTO, AulaModel>();
+
+            CreateMap<AulaUpdateDTO, AulaModel>()
+                .ReverseMap();
+
+            CreateMap<AulaModel, AulaResponseDTO>()
+                .ForMember(dest => dest.TipoAula, opt => opt.MapFrom(src => src.TipoAula.GetDescription()));
         }
     }
 }

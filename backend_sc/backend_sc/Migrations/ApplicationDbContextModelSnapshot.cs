@@ -22,6 +22,53 @@ namespace backend_sc.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
+            modelBuilder.Entity("backend_sc.Models.AulaModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<int>("TipoAula")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Aula");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descricao = "",
+                            TipoAula = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Descricao = "",
+                            TipoAula = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Descricao = "",
+                            TipoAula = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Descricao = "",
+                            TipoAula = 3
+                        });
+                });
+
             modelBuilder.Entity("backend_sc.Models.PermissaoModel", b =>
                 {
                     b.Property<int>("Id")
