@@ -2,6 +2,7 @@ using backend_sc.Configurations;
 using backend_sc.DataContext;
 using backend_sc.Security;
 using backend_sc.Services.AlunoService;
+using backend_sc.Services.AulaService;
 using backend_sc.Services.InstrutorService;
 using backend_sc.Services.PessoaService;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
@@ -25,6 +26,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPessoaInterface, PessoaService>();
 builder.Services.AddScoped<IAlunoInterface, AlunoService>();
 builder.Services.AddScoped<IInstrutorInterface, InstrutorService>();
+builder.Services.AddScoped<IAulaInterface, AulaService>();
 
 //Security
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();

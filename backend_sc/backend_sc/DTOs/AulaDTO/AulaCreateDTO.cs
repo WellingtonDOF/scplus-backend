@@ -1,12 +1,15 @@
-﻿namespace backend_sc.DTOs.AulaDTO
+﻿using backend_sc.Enums;
+using System.ComponentModel.DataAnnotations;
+
+namespace backend_sc.DTOs.AulaDTO
 {
     public class AulaCreateDTO
     {
         [Required]
         [MaxLength(50)]
-        public string TipoAula { get; set; }
+        public int TipoAula { get; set; }
 
-        [required]
+        [Required]
         [MaxLength(250)]
         public string Descricao { get; set; }
     }

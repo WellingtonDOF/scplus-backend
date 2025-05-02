@@ -18,6 +18,22 @@ namespace backend_sc.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Aula",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    TipoAula = table.Column<int>(type: "int", nullable: false),
+                    Descricao = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Aula", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Permissoes",
                 columns: table => new
                 {
@@ -70,7 +86,7 @@ namespace backend_sc.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    CategoriaCnhDesejada = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
+                    CategoriaCnh = table.Column<string>(type: "varchar(22)", maxLength: 22, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     StatusPagamento = table.Column<int>(type: "int", nullable: false),
                     StatusCurso = table.Column<bool>(type: "tinyint(1)", nullable: false)
@@ -109,6 +125,17 @@ namespace backend_sc.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
+                table: "Aula",
+                columns: new[] { "Id", "Descricao", "TipoAula" },
+                values: new object[,]
+                {
+                    { 1, "", 0 },
+                    { 2, "", 1 },
+                    { 3, "", 2 },
+                    { 4, "", 3 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Permissoes",
                 columns: new[] { "Id", "TipoPermissao" },
                 values: new object[,]
@@ -135,6 +162,9 @@ namespace backend_sc.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Alunos");
+
+            migrationBuilder.DropTable(
+                name: "Aula");
 
             migrationBuilder.DropTable(
                 name: "Instrutores");

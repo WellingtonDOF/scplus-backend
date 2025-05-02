@@ -15,7 +15,7 @@ namespace backend_sc.DataContext
         public DbSet<AlunoModel> Alunos { get; set; }
         public DbSet<InstrutorModel> Instrutores { get; set; }
         public DbSet<PermissaoModel> Permissoes { get; set; }
-
+        public DbSet<AulaModel> Aula{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,6 @@ namespace backend_sc.DataContext
             modelBuilder.Entity<AlunoModel>().ToTable("Alunos");
             modelBuilder.Entity<InstrutorModel>().ToTable("Instrutores");
 
-
             //Configuração de Pessoa
             modelBuilder.ApplyConfiguration(new PessoaConfiguration());
 
@@ -35,6 +34,13 @@ namespace backend_sc.DataContext
             new PermissaoModel { Id = 1, TipoPermissao = TipoPermissaoEnum.Aluno },
             new PermissaoModel { Id = 2, TipoPermissao = TipoPermissaoEnum.Instrutor },
             new PermissaoModel { Id = 3, TipoPermissao = TipoPermissaoEnum.Admin });
+
+            //Cria os tipos de aula definidos sempre que iniciar o banco.
+            modelBuilder.Entity<AulaModel>().HasData(
+            new AulaModel { Id = 1, TipoAula = TipoAulaEnum.Simulado, Descricao = "" },
+            new AulaModel { Id = 2, TipoAula = TipoAulaEnum.Pratica, Descricao = "" },
+            new AulaModel { Id = 3, TipoAula = TipoAulaEnum.Teorica, Descricao = "" },
+            new AulaModel { Id = 4, TipoAula = TipoAulaEnum.Prova, Descricao = "" });
         }
     }
 }
