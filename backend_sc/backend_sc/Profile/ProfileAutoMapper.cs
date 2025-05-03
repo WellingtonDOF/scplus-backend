@@ -63,7 +63,7 @@
 
             CreateMap<AulaModel, AulaResponseDTO>()
                 .ForMember(dest => dest.TipoAula, opt => opt.MapFrom(src => src.TipoAula.GetDescription()));
-
+                
             //VEICULO MAPEAMENTO
             CreateMap<VeiculoCreateDTO, VeiculoModel>();
 
