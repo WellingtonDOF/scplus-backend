@@ -6,6 +6,7 @@
     using backend_sc.DTOs.AulaDTO;
     using backend_sc.DTOs.InstrutorDTO;
     using backend_sc.DTOs.PessoaDTO;
+    using backend_sc.DTOs.VeiculoDTO;
     using backend_sc.Mapping;
     using backend_sc.Models;
     using System.Reflection;
@@ -62,6 +63,15 @@
 
             CreateMap<AulaModel, AulaResponseDTO>()
                 .ForMember(dest => dest.TipoAula, opt => opt.MapFrom(src => src.TipoAula.GetDescription()));
+
+            //VEICULO MAPEAMENTO
+            CreateMap<VeiculoCreateDTO, VeiculoModel>();
+
+            CreateMap<VeiculoUpdateDTO, VeiculoModel>()
+                .ReverseMap();
+
+            CreateMap<VeiculoModel, VeiculoResponseDTO>()
+                .ForMember(dest => dest.StatusVeiculo, opt => opt.MapFrom(src => src.StatusVeiculo ? "Ativo" : "Inativo"));
         }
     }
 }

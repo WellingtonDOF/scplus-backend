@@ -16,5 +16,7 @@ namespace backend_sc.Configurations
                 .HasForeignKey(p => p.PermissaoId)
                 .IsRequired();  
         }
+
+
     }
 }

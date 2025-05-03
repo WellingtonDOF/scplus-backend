@@ -5,6 +5,7 @@ using backend_sc.Services.AlunoService;
 using backend_sc.Services.AulaService;
 using backend_sc.Services.InstrutorService;
 using backend_sc.Services.PessoaService;
+using backend_sc.Services.VeiculoService;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,7 @@ builder.Services.AddScoped<IPessoaInterface, PessoaService>();
 builder.Services.AddScoped<IAlunoInterface, AlunoService>();
 builder.Services.AddScoped<IInstrutorInterface, InstrutorService>();
 builder.Services.AddScoped<IAulaInterface, AulaService>();
+builder.Services.AddScoped<IVeiculoInterface, VeiculoService>();
 
 //Security
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();

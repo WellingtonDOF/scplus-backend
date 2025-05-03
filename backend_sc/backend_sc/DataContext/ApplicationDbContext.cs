@@ -16,6 +16,7 @@ namespace backend_sc.DataContext
         public DbSet<InstrutorModel> Instrutores { get; set; }
         public DbSet<PermissaoModel> Permissoes { get; set; }
         public DbSet<AulaModel> Aula{ get; set; }
+        public DbSet<VeiculoModel> Veiculo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
