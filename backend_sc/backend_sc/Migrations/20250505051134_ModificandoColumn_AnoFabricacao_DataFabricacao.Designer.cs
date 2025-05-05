@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend_sc.DataContext;
 
@@ -11,9 +12,11 @@ using backend_sc.DataContext;
 namespace backend_sc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250505051134_ModificandoColumn_AnoFabricacao_DataFabricacao")]
+    partial class ModificandoColumn_AnoFabricacao_DataFabricacao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,6 +104,7 @@ namespace backend_sc.Migrations
 
                     b.ToTable("Matricula");
                 });
+
             modelBuilder.Entity("backend_sc.Models.PermissaoModel", b =>
                 {
                     b.Property<int>("Id")
@@ -208,6 +212,7 @@ namespace backend_sc.Migrations
 
                     b.Property<DateTime>("DataFabricacao")
                         .HasColumnType("datetime(6)");
+
                     b.Property<string>("Marca")
                         .IsRequired()
                         .HasMaxLength(150)

@@ -8,7 +8,7 @@ namespace backend_sc.Services.VeiculoService
         Task<ServiceResponse<List<VeiculoResponseDTO>>> GetVeiculos();
         Task<ServiceResponse<VeiculoResponseDTO>> CreateVeiculo(VeiculoCreateDTO newVeiculo);
         Task<ServiceResponse<VeiculoResponseDTO>> GetVeiculoById(int id);
-        Task<ServiceResponse<VeiculoResponseDTO>> UpdateVeiculo(int id, VeiculoModel editVeiculo);
+        Task<ServiceResponse<VeiculoResponseDTO>> UpdateVeiculo(int id, VeiculoUpdateDTO editVeiculo);
         Task<ServiceResponse<bool>> DeleteVeiculo(int id);
         Task<ServiceResponse<bool>> VerificarPlacaExistente(string placa);
         Task<ServiceResponse<VeiculoResponseDTO>> InativarVeiculo(int id);

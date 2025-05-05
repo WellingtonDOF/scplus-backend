@@ -10,7 +10,7 @@ namespace backend_sc.DTOs.VeiculoDTO
         public string Placa { get; set; }
         public string Modelo { get; set; }
         public string Marca { get; set; }
-        public DateTime AnoFabricacao { get; set; }
+        public DateTime DataFabricacao { get; set; }
         public string Categoria { get; set; }
         public DateTime DataAquisicao { get; set; }
         public string StatusVeiculo { get; set; }

@@ -23,7 +23,7 @@ namespace backend_sc.Models
         public string Marca { get; set; }
 
         [Required]
-        public DateTime AnoFabricacao { get; set; }
+        public DateTime DataFabricacao { get; set; }
 
         [Required]
         public VeiculoCategoriaEnum Categoria { get; set; }
