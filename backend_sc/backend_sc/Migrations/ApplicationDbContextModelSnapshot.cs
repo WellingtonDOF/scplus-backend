@@ -101,7 +101,6 @@ namespace backend_sc.Migrations
 
                     b.ToTable("Matricula");
                 });
-
             modelBuilder.Entity("backend_sc.Models.PermissaoModel", b =>
                 {
                     b.Property<int>("Id")
@@ -209,7 +208,6 @@ namespace backend_sc.Migrations
 
                     b.Property<DateTime>("DataFabricacao")
                         .HasColumnType("datetime(6)");
-
                     b.Property<string>("Marca")
                         .IsRequired()
                         .HasMaxLength(150)

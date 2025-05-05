@@ -52,6 +52,5 @@ namespace backend_sc.Controllers
         {
             return Ok(await _veiculoInterface.UpdateVeiculo(id, editVeiculo));
         }
-
     }
 }

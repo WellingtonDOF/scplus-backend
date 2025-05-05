@@ -189,7 +189,7 @@ namespace backend_sc.Services.VeiculoService
             return serviceResponse;
         }
 
-    
+
         public async Task<ServiceResponse<bool>> VerificarPlacaExistente(string placa)
         {
             ServiceResponse<bool> serviceResponse = new ServiceResponse<bool>();

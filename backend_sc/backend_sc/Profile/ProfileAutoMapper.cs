@@ -83,7 +83,6 @@
             CreateMap<MatriculaModel, MatriculaResponseDTO>()
                 .ForMember(dest => dest.StatusMatricula, opt => opt.MapFrom(src => src.StatusMatricula ? "Ativo" : "Inativo"))
                 .ForMember(dest => dest.AlunoCpf, opt => opt.MapFrom(src => src.Aluno.Cpf));
-
         }
     }
 }
