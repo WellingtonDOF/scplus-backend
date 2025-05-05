@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend_sc.DataContext;
 
@@ -11,9 +12,11 @@ using backend_sc.DataContext;
 namespace backend_sc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250503234228_Create_MatriculaTable")]
+    partial class Create_MatriculaTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -201,13 +204,13 @@ namespace backend_sc.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("AnoFabricacao")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int>("Categoria")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DataAquisicao")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("DataFabricacao")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Marca")

@@ -19,12 +19,12 @@ namespace backend_sc.DTOs.VeiculoDTO
         public string Marca { get; set; }
 
         [Required]
-        public DateTime AnoFabricacao { get; set; }
+        public string DataFabricacao { get; set; }
 
         [Required]
-        public int Categoria { get; set; }
+        public string Categoria { get; set; }
 
         [Required]
-        public DateTime DataAquisicao { get; set; }
+        public string DataAquisicao { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using backend_sc.DataContext;
+using backend_sc.DTOs.MatriculaDTO;
 using backend_sc.DTOs.VeiculoDTO;
 using backend_sc.Models;
 using Microsoft.EntityFrameworkCore;
@@ -157,7 +158,7 @@ namespace backend_sc.Services.VeiculoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<VeiculoResponseDTO>> UpdateVeiculo(int id, VeiculoModel editVeiculo)
+        public async Task<ServiceResponse<VeiculoResponseDTO>> UpdateVeiculo(int id, VeiculoUpdateDTO editVeiculo)
         {
             ServiceResponse<VeiculoResponseDTO> serviceResponse = new ServiceResponse<VeiculoResponseDTO>();
 
@@ -188,6 +189,7 @@ namespace backend_sc.Services.VeiculoService
             return serviceResponse;
         }
 
+    
         public async Task<ServiceResponse<bool>> VerificarPlacaExistente(string placa)
         {
             ServiceResponse<bool> serviceResponse = new ServiceResponse<bool>();
