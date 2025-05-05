@@ -15,5 +15,9 @@ namespace backend_sc.DTOs.MatriculaDTO
         public string CategoriaPlano { get; set; }
         public string StatusMatricula { get; set; }
         public string AlunoCpf { get; set; }
+        public string AlunoNome { get; set; }
+        public string AlunoTelefone { get; set; }
+
+
     }
 }
