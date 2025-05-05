@@ -82,7 +82,9 @@
 
             CreateMap<MatriculaModel, MatriculaResponseDTO>()
                 .ForMember(dest => dest.StatusMatricula, opt => opt.MapFrom(src => src.StatusMatricula ? "Ativo" : "Inativo"))
-                .ForMember(dest => dest.AlunoCpf, opt => opt.MapFrom(src => src.Aluno.Cpf));
+                .ForMember(dest => dest.AlunoCpf, opt => opt.MapFrom(src => src.Aluno.Cpf))
+                .ForMember(dest => dest.AlunoNome, opt => opt.MapFrom(src => src.Aluno.NomeCompleto))
+                .ForMember(dest => dest.AlunoTelefone, opt => opt.MapFrom(src => src.Aluno.Telefone));
         }
     }
 }
