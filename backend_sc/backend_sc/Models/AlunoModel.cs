@@ -6,9 +6,8 @@ namespace backend_sc.Models
 {
     public class AlunoModel : PessoaModel
     {
-        [Required]
-        [MaxLength(22)]
-        public string CategoriaCnh { get; set; }
+        [MaxLength(500)]
+        public string Observacao { get; set; }
 
         [Required]
         public StatusPagamentoEnum StatusPagamento { get; set; }

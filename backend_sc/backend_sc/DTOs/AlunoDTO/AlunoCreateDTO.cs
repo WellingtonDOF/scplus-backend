@@ -8,8 +8,7 @@ namespace backend_sc.DTOs.AlunoDTO
 {
     public class AlunoCreateDTO : PessoaCreateDTO
     {
-        [Required]
-        [MaxLength(22)]
-        public string CategoriaCnh { get; set; }
+        [MaxLength(500)]
+        public string Observacao { get; set; }
     }
 }

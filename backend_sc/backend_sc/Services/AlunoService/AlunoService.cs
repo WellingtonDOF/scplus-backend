@@ -8,6 +8,7 @@ using backend_sc.Services.PessoaService;
 using Microsoft.EntityFrameworkCore;
 using backend_sc.Security;
 using Microsoft.AspNetCore.Mvc;
+using backend_sc.Mapping;
 
 namespace backend_sc.Services.AlunoService
 {
