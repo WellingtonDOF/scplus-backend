@@ -181,31 +181,34 @@ namespace backend_sc.Services.MatriculaService
                     return response;
                 }
 
-                // 2. Verifica se o aluno existe e se já tem matrícula
-                var resultado = await _context.Pessoas
+                var aluno = await _context.Pessoas
                     .Where(a => a.Cpf == cpf)
-                    .Select(a => new {
-                        a.Id,
-                        TemMatricula = _context.Matricula.Any(m => m.AlunoId == a.Id)
-                    })
+                    .Select(a => new { a.Id, a.NomeCompleto, a.Telefone, a.Email })
                     .FirstOrDefaultAsync();
 
-                if (resultado == null)
+
+
+                if(aluno == null)
                 {
                     response.Dados = -1;
                     response.Sucesso = false;
                     response.Mensagem = "CPF não cadastrado no sistema.";
-                }
-                else if (resultado.TemMatricula)
-                {
-                    response.Dados = -1;
-                    response.Sucesso = false;
-                    response.Mensagem = "Usuário já possui matrícula ativa.";
+                    return response;
                 }
                 else
                 {
-                    response.Dados = resultado.Id; 
-                    response.Mensagem = "CPF válido e disponível para matrícula.";
+                    bool temMatricula = await _context.Matricula.AnyAsync(m => m.AlunoId == aluno.Id);
+
+                    if (temMatricula) {
+                        response.Dados = -1;
+                        response.Sucesso = false;
+                        response.Mensagem = "Usuário já possui matrícula ativa.";
+                    }
+                    else
+                    {
+                        response.Dados = aluno.Id;
+                        response.Mensagem = "CPF válido e disponível para matrícula.";
+                    }
                 }
             }
             catch (Exception ex)

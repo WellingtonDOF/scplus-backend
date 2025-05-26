@@ -1,37 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\scplus-backend\\backend_sc\\",
+  "WorkspaceRootPath": "C:\\sistemaSC\\scplus-backend\\backend_sc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\services\\matriculaservice\\matriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\matriculaservice\\matriculaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\models\\matriculamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\models\\matriculamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\dtos\\matriculadto\\matricularesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\matriculadto\\matricularesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\models\\alunomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\models\\alunomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\models\\alunomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
@@ -46,24 +62,75 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlunoController.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
-              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AlunoController.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
-              "RelativeToolTip": "backend_sc\\Controllers\\AlunoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MatriculaModel.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\MatriculaModel.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Models\\MatriculaModel.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\MatriculaModel.cs",
+              "RelativeToolTip": "backend_sc\\Models\\MatriculaModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:08:18.051Z",
+              "WhenOpened": "2025-05-26T19:13:57.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MatriculaService.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\MatriculaService\\MatriculaService.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Services\\MatriculaService\\MatriculaService.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\MatriculaService\\MatriculaService.cs",
+              "RelativeToolTip": "backend_sc\\Services\\MatriculaService\\MatriculaService.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAASwNwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:13:32.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MatriculaResponseDTO.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "RelativeDocumentMoniker": "backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "RelativeToolTip": "backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:12:08.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MatriculaController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\MatriculaController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\MatriculaController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\MatriculaController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\MatriculaController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:09:31.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AlunoController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AlunoController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\AlunoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:08:18.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AlunoService.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
               "RelativeDocumentMoniker": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
               "RelativeToolTip": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -72,81 +139,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ProfileAutoMapper.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
               "RelativeDocumentMoniker": "backend_sc\\Profile\\ProfileAutoMapper.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
               "RelativeToolTip": "backend_sc\\Profile\\ProfileAutoMapper.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAACJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:07:14.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:07:14.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "AlunoModel.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
               "RelativeDocumentMoniker": "backend_sc\\Models\\AlunoModel.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
               "RelativeToolTip": "backend_sc\\Models\\AlunoModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:45.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:06:45.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AlunoUpdateDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
               "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
               "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:14.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:06:14.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AlunoResponseDTO.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
+              "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
+              "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:06:05.884Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AlunoResponseDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:05.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AlunoCreateDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
               "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
               "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:05:19.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T21:05:19.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "README.md",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\README.md",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\README.md",
               "RelativeDocumentMoniker": "backend_sc\\README.md",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\README.md",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\README.md",
               "RelativeToolTip": "backend_sc\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-05-19T20:46:16.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T20:46:16.676Z"
             }
           ]
         }
