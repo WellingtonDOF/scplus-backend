@@ -3,12 +3,14 @@ using backend_sc.DTOs.InstrutorDTO;
 using backend_sc.Models;
 using backend_sc.Services.AlunoService;
 using backend_sc.Services.InstrutorService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_sc.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Policy = "AdminOnly")]
     public class InstrutorController : ControllerBase
     {
         private readonly IInstrutorInterface _instrutorInterface;

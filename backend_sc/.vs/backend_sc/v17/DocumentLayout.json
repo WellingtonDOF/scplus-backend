@@ -1,38 +1,126 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\scplus-backend\\backend_sc\\",
+  "WorkspaceRootPath": "C:\\sistemaSC\\scplus-backend\\backend_sc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\services\\authservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\authservice\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\mapping\\permissaoidparatipoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\mapping\\permissaoidparatipoconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\models\\alunomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\models\\alunomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\aulacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\aulacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunoupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\instrutorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\instrutorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\dtos\\alunodto\\alunoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\alunodto\\alunoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\matriculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|d:\\scplus-backend\\backend_sc\\backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\pessoacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\profile\\profileautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\alunoservice\\alunoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\configurations\\veiculoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\configurations\\veiculoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\configurations\\pessoaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\configurations\\pessoaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\configurations\\permissaoconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\configurations\\permissaoconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\mapping\\tipopermissaoidconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\mapping\\tipopermissaoidconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\datacontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\datacontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\enums\\tipopermissaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\enums\\tipopermissaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\configurations\\lowercasecontrollerroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\configurations\\lowercasecontrollerroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\configurations\\enumextetesions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\configurations\\enumextetesions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\enums\\tipocategoriaplano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\enums\\tipocategoriaplano.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\enums\\statuspagamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\enums\\statuspagamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\enums\\veiculocategoriaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\enums\\veiculocategoriaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\enums\\tipoaulaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\enums\\tipoaulaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\models\\matriculamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\models\\matriculamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\dtos\\matriculadto\\matricularesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\dtos\\matriculadto\\matricularesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|c:\\sistemasc\\scplus-backend\\backend_sc\\backend_sc\\services\\instrutorservice\\instrutorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93EAF80A-CA68-4059-A70A-EA572BEF0F0F}|backend_sc\\backend_sc.csproj|solutionrelative:backend_sc\\services\\instrutorservice\\instrutorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +130,396 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 29,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlunoController.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
-              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AlunoController.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
-              "RelativeToolTip": "backend_sc\\Controllers\\AlunoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "VeiculoController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\VeiculoController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\VeiculoController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\VeiculoController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\VeiculoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:08:18.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AlunoService.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
-              "RelativeDocumentMoniker": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
-              "RelativeToolTip": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:07:39.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProfileAutoMapper.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
-              "RelativeDocumentMoniker": "backend_sc\\Profile\\ProfileAutoMapper.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
-              "RelativeToolTip": "backend_sc\\Profile\\ProfileAutoMapper.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:07:14.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AlunoModel.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
-              "RelativeDocumentMoniker": "backend_sc\\Models\\AlunoModel.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\Models\\AlunoModel.cs",
-              "RelativeToolTip": "backend_sc\\Models\\AlunoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:45.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AlunoUpdateDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
-              "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
-              "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoUpdateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:14.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AlunoResponseDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:06:05.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlunoCreateDTO.cs",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
-              "RelativeDocumentMoniker": "backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
-              "RelativeToolTip": "backend_sc\\DTOs\\AlunoDTO\\AlunoCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T21:05:19.995Z",
+              "WhenOpened": "2025-05-31T07:12:41.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "PessoaController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\PessoaController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\PessoaController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\PessoaController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\PessoaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T07:12:32.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MatriculaController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\MatriculaController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\MatriculaController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\MatriculaController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\MatriculaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T07:00:49.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PermissaoIdParaTipoConverter.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Mapping\\PermissaoIdParaTipoConverter.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Mapping\\PermissaoIdParaTipoConverter.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Mapping\\PermissaoIdParaTipoConverter.cs",
+              "RelativeToolTip": "backend_sc\\Mapping\\PermissaoIdParaTipoConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:49:43.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TipoPermissaoIdConverter.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Mapping\\TipoPermissaoIdConverter.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Mapping\\TipoPermissaoIdConverter.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Mapping\\TipoPermissaoIdConverter.cs",
+              "RelativeToolTip": "backend_sc\\Mapping\\TipoPermissaoIdConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:48:28.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StatusPagamentoEnum.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\StatusPagamentoEnum.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Enums\\StatusPagamentoEnum.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\StatusPagamentoEnum.cs",
+              "RelativeToolTip": "backend_sc\\Enums\\StatusPagamentoEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:48:48.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "VeiculoCategoriaEnum.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\VeiculoCategoriaEnum.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Enums\\VeiculoCategoriaEnum.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\VeiculoCategoriaEnum.cs",
+              "RelativeToolTip": "backend_sc\\Enums\\VeiculoCategoriaEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:48:47.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TipoAulaEnum.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoAulaEnum.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Enums\\TipoAulaEnum.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoAulaEnum.cs",
+              "RelativeToolTip": "backend_sc\\Enums\\TipoAulaEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:48:45.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TipoCategoriaPlano.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoCategoriaPlano.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Enums\\TipoCategoriaPlano.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoCategoriaPlano.cs",
+              "RelativeToolTip": "backend_sc\\Enums\\TipoCategoriaPlano.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:48:45.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TipoPermissaoEnum.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoPermissaoEnum.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Enums\\TipoPermissaoEnum.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Enums\\TipoPermissaoEnum.cs",
+              "RelativeToolTip": "backend_sc\\Enums\\TipoPermissaoEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:45:12.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VeiculoConfiguration.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\VeiculoConfiguration.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Configurations\\VeiculoConfiguration.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\VeiculoConfiguration.cs",
+              "RelativeToolTip": "backend_sc\\Configurations\\VeiculoConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:45:00.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PessoaConfiguration.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\PessoaConfiguration.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Configurations\\PessoaConfiguration.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\PessoaConfiguration.cs",
+              "RelativeToolTip": "backend_sc\\Configurations\\PessoaConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:44:58.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PermissaoConfig.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\PermissaoConfig.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Configurations\\PermissaoConfig.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\PermissaoConfig.cs",
+              "RelativeToolTip": "backend_sc\\Configurations\\PermissaoConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:44:46.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LowercaseControllerRoute.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\LowercaseControllerRoute.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Configurations\\LowercaseControllerRoute.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\LowercaseControllerRoute.cs",
+              "RelativeToolTip": "backend_sc\\Configurations\\LowercaseControllerRoute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:44:43.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250531053429_Upgrade_Conta_AdminDefault.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs",
+              "RelativeToolTip": "backend_sc\\Migrations\\20250531053429_Upgrade_Conta_AdminDefault.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:34:29.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "README.md",
-              "DocumentMoniker": "D:\\scplus-backend\\backend_sc\\backend_sc\\README.md",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\README.md",
               "RelativeDocumentMoniker": "backend_sc\\README.md",
-              "ToolTip": "D:\\scplus-backend\\backend_sc\\backend_sc\\README.md",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\README.md",
               "RelativeToolTip": "backend_sc\\README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-05-19T20:46:16.676Z",
+              "WhenOpened": "2025-05-31T05:34:04.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DataContext\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "backend_sc\\DataContext\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DataContext\\ApplicationDbContext.cs",
+              "RelativeToolTip": "backend_sc\\DataContext\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwDsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:29:34.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlunoService.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "RelativeToolTip": "backend_sc\\Services\\AlunoService\\AlunoService.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAcwJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:25:18.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\appsettings.json",
+              "RelativeDocumentMoniker": "backend_sc\\appsettings.json",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\appsettings.json",
+              "RelativeToolTip": "backend_sc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-31T05:16:55.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EnumExtetesions.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\EnumExtetesions.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Configurations\\EnumExtetesions.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Configurations\\EnumExtetesions.cs",
+              "RelativeToolTip": "backend_sc\\Configurations\\EnumExtetesions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:11:11.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MatriculaModel.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\MatriculaModel.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Models\\MatriculaModel.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Models\\MatriculaModel.cs",
+              "RelativeToolTip": "backend_sc\\Models\\MatriculaModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwCAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:11:10.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MatriculaResponseDTO.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "RelativeDocumentMoniker": "backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "RelativeToolTip": "backend_sc\\DTOs\\MatriculaDTO\\MatriculaResponseDTO.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:11:06.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Program.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Program.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Program.cs",
+              "RelativeToolTip": "backend_sc\\Program.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAUwGAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T05:00:56.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InstrutorController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\InstrutorController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\InstrutorController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\InstrutorController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\InstrutorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:47:48.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AulaController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AulaController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AulaController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AulaController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\AulaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:53:17.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:48:32.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AlunoController.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Controllers\\AlunoController.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Controllers\\AlunoController.cs",
+              "RelativeToolTip": "backend_sc\\Controllers\\AlunoController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA9wA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:47:39.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "InstrutorService.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\InstrutorService\\InstrutorService.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Services\\InstrutorService\\InstrutorService.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\InstrutorService\\InstrutorService.cs",
+              "RelativeToolTip": "backend_sc\\Services\\InstrutorService\\InstrutorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:44:49.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfileAutoMapper.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "RelativeToolTip": "backend_sc\\Profile\\ProfileAutoMapper.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAwGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:38:24.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AuthService\\AuthService.cs",
+              "RelativeDocumentMoniker": "backend_sc\\Services\\AuthService\\AuthService.cs",
+              "ToolTip": "C:\\sistemaSC\\scplus-backend\\backend_sc\\backend_sc\\Services\\AuthService\\AuthService.cs",
+              "RelativeToolTip": "backend_sc\\Services\\AuthService\\AuthService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T04:38:04.747Z",
               "EditorCaption": ""
             }
           ]

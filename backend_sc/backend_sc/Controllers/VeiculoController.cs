@@ -3,12 +3,14 @@ using backend_sc.DTOs.VeiculoDTO;
 using backend_sc.Models;
 using backend_sc.Services.MatriculaService;
 using backend_sc.Services.VeiculoService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_sc.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
+    [Authorize(Policy = "InstrutorOrAdmin")]
     public class VeiculoController : ControllerBase
     {
         private readonly IVeiculoInterface _veiculoInterface;

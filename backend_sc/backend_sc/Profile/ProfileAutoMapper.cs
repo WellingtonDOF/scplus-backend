@@ -5,6 +5,7 @@
     using backend_sc.DTOs.AlunoDTO;
     using backend_sc.DTOs.AulaDTO;
     using backend_sc.DTOs.InstrutorDTO;
+    using backend_sc.DTOs.LoginDTO;
     using backend_sc.DTOs.MatriculaDTO;
     using backend_sc.DTOs.PessoaDTO;
     using backend_sc.DTOs.VeiculoDTO;
@@ -22,8 +23,9 @@
                 .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario));
 
             CreateMap<PessoaModel, PessoaResponseDTO>()
-                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.Permissao.TipoPermissao.ToString()))
+                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.PermissaoId))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ? "Ativo" : "Inativo"));
+
 
             // ALUNO MAPEAMENTO
             CreateMap<AlunoCreateDTO, AlunoModel>()
@@ -36,7 +38,7 @@
                 .ReverseMap();
 
             CreateMap<AlunoModel, AlunoResponseDTO>()
-                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.Permissao.TipoPermissao.ToString()))
+                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.PermissaoId))
                 .ForMember(dest => dest.StatusCurso, opt => opt.MapFrom(src => src.StatusCurso ? "Ativo" : "Inativo"))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status? "Ativo" : "Inativo"));
 
@@ -52,7 +54,7 @@
                 .ReverseMap();
 
             CreateMap<InstrutorModel, InstrutorResponseDTO>()
-                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.Permissao.TipoPermissao.ToString()))
+                .ForMember(dest => dest.TipoUsuario, opt => opt.MapFrom(src => src.PermissaoId))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status? "Ativo" : "Inativo"));
 
             // AULA MAPEAMENTO
@@ -84,6 +86,14 @@
                 .ForMember(dest => dest.AlunoCpf, opt => opt.MapFrom(src => src.Aluno.Cpf))
                 .ForMember(dest => dest.AlunoNome, opt => opt.MapFrom(src => src.Aluno.NomeCompleto))
                 .ForMember(dest => dest.AlunoTelefone, opt => opt.MapFrom(src => src.Aluno.Telefone));
+
+            //LOGIN MAPEAMENTO
+            CreateMap<PessoaModel, LoginResponseDTO>()
+              .ReverseMap()
+              .ForMember(dest => dest.PermissaoId, opt => opt.ConvertUsing<TipoParaPermissaoIdConverter, string>(src => src.TipoUsuario));
+
+            CreateMap<PessoaModel, LoginResponseDTO>()
+               .ForMember(dest => dest.TipoUsuario, opt => opt.ConvertUsing<PermissaoIdParaTipoConverter, int>(src => src.PermissaoId));
         }
     }
 }

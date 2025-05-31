@@ -166,55 +166,71 @@ namespace backend_sc.Services.MatriculaService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<int>> VerificarCpfExistente(string cpf)
+        public async Task<ServiceResponse<AlunoParaMatriculaDTO>> VerificarCpfExistente(string cpf)
         {
-            var response = new ServiceResponse<int>();
+            var response = new ServiceResponse<AlunoParaMatriculaDTO>();
 
             try
             {
                 // 1. Validação básica do CPF
                 if (string.IsNullOrWhiteSpace(cpf) || cpf.Length != 11 || !cpf.All(char.IsDigit))
                 {
+                    response.Dados = null;
                     response.Sucesso = false;
                     response.Mensagem = "CPF inválido";
-                    response.Dados = -1;
                     return response;
                 }
 
-                // 2. Verifica se o aluno existe e se já tem matrícula
-                var resultado = await _context.Pessoas
-                    .Where(a => a.Cpf == cpf)
-                    .Select(a => new {
-                        a.Id,
-                        TemMatricula = _context.Matricula.Any(m => m.AlunoId == a.Id)
-                    })
-                    .FirstOrDefaultAsync();
+                var pessoaInfo = await _context.Pessoas
+                  .Where(p => p.Cpf == cpf)
+                  .Select(p => new { p.Id, p.NomeCompleto, p.Telefone, p.Email }) // Continuamos projetando para um tipo anônimo aqui, mas agora sabemos que o Id é o que precisamos
+                  .FirstOrDefaultAsync();
 
-                if (resultado == null)
+                if(pessoaInfo== null)
                 {
-                    response.Dados = -1;
+                    response.Dados = null;
                     response.Sucesso = false;
                     response.Mensagem = "CPF não cadastrado no sistema.";
+                    return response;
                 }
-                else if (resultado.TemMatricula)
+
+                bool isAluno = await _context.Alunos.AnyAsync(a => a.Id == pessoaInfo.Id);
+
+                if (!isAluno)
                 {
-                    response.Dados = -1;
+                    response.Dados = null;
+                    response.Sucesso = false;
+                    response.Mensagem = "CPF cadastrado, mas não corresponde a um Aluno.";
+                    return response;
+                }
+
+                var aluno = new AlunoParaMatriculaDTO // Mapeia de forma manual para o meu DTO
+                {
+                    Id = pessoaInfo.Id,
+                    NomeCompleto = pessoaInfo.NomeCompleto,
+                    Telefone = pessoaInfo.Telefone,
+                    Email = pessoaInfo.Email
+                };
+
+                bool temMatricula = await _context.Matricula.AnyAsync(m => m.AlunoId == aluno.Id);
+
+                if (temMatricula) {
+                    response.Dados = aluno;
                     response.Sucesso = false;
                     response.Mensagem = "Usuário já possui matrícula ativa.";
                 }
                 else
                 {
-                    response.Dados = resultado.Id; 
+                    response.Dados = aluno;
                     response.Mensagem = "CPF válido e disponível para matrícula.";
                 }
             }
             catch (Exception ex)
             {
-                response.Dados = -1;
+                response.Dados = null;
                 response.Mensagem = $"Erro: {ex.Message}";
                 response.Sucesso = false;
             }
-
             return response;
         }
 
