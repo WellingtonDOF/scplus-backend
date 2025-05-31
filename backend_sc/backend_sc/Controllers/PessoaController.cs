@@ -2,12 +2,14 @@
 using backend_sc.Models;
 using backend_sc.Services.AlunoService;
 using backend_sc.Services.PessoaService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_sc.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
+    [Authorize(Policy = "InstrutorOrAdmin")]
     public class PessoaController : ControllerBase
     {
 

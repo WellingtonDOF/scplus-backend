@@ -10,7 +10,7 @@ namespace backend_sc.Services.MatriculaService
         Task<ServiceResponse<MatriculaResponseDTO>> GetMatriculaById(int id);
         Task<ServiceResponse<MatriculaResponseDTO>> UpdateMatricula(int id, MatriculaUpdateDTO editMatricula);
         Task<ServiceResponse<bool>> DeleteMatricula(int id);
-        Task<ServiceResponse<int>> VerificarCpfExistente(string cpf);
+        Task<ServiceResponse<AlunoParaMatriculaDTO>> VerificarCpfExistente(string cpf);
         Task<ServiceResponse<MatriculaResponseDTO>> MudarStatusMatricula(int id);
     }
 }

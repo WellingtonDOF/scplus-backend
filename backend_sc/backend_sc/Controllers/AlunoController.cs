@@ -3,6 +3,7 @@ using backend_sc.DTOs.PessoaDTO;
 using backend_sc.Models;
 using backend_sc.Services.AlunoService;
 using backend_sc.Services.PessoaService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ namespace backend_sc.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Policy = "InstrutorOrAdmin")]
     public class AlunoController : ControllerBase
     {
         private readonly IAlunoInterface _alunoInterface;

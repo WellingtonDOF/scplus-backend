@@ -1,6 +1,7 @@
 ﻿using backend_sc.DTOs.AulaDTO;
 using backend_sc.Models;
 using backend_sc.Services.AulaService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace backend_sc.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Policy = "InstrutorOrAdmin")]
     public class AulaController : ControllerBase
     {
         private readonly IAulaInterface _aulaInterface;

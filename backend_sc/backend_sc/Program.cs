@@ -3,12 +3,16 @@ using backend_sc.DataContext;
 using backend_sc.Security;
 using backend_sc.Services.AlunoService;
 using backend_sc.Services.AulaService;
+using backend_sc.Services.AuthService;
 using backend_sc.Services.InstrutorService;
 using backend_sc.Services.MatriculaService;
 using backend_sc.Services.PessoaService;
 using backend_sc.Services.VeiculoService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +38,37 @@ builder.Services.AddScoped<IMatriculaInterface, MatriculaService>();
 
 //Security
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+//Login
+builder.Services.AddScoped<IAuthInterface, AuthService>();
+
+// JWT Authentication
+var jwtKey = builder.Configuration["Jwt:Key"];
+var jwtIssuer = builder.Configuration["Jwt:Issuer"];
+var jwtAudience = builder.Configuration["Jwt:Audience"];
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtIssuer,
+        ValidAudience = jwtAudience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("InstrutorOrAdmin", policy => policy.RequireRole("Instrutor", "Admin"));
+    options.AddPolicy("AlunoOrAbove", policy => policy.RequireRole("Aluno", "Instrutor", "Admin"));
+});
 
 
 //parte do banco de dados
@@ -66,12 +101,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseAuthorization();
 
-app.UseCors();
-
 app.MapControllers();
-
 
 app.Run();
