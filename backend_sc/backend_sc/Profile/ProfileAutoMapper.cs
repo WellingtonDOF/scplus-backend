@@ -7,8 +7,11 @@
     using backend_sc.DTOs.InstrutorDTO;
     using backend_sc.DTOs.LoginDTO;
     using backend_sc.DTOs.MatriculaDTO;
+    using backend_sc.DTOs.PagamentoDTO;
+    using backend_sc.DTOs.ParcelaDTO;
     using backend_sc.DTOs.PessoaDTO;
     using backend_sc.DTOs.VeiculoDTO;
+    using backend_sc.Enums;
     using backend_sc.Mapping;
     using backend_sc.Models;
     using System.Reflection;
@@ -94,6 +97,50 @@
 
             CreateMap<PessoaModel, LoginResponseDTO>()
                .ForMember(dest => dest.TipoUsuario, opt => opt.ConvertUsing<PermissaoIdParaTipoConverter, int>(src => src.PermissaoId));
+
+            // PAGAMENTO MAPEAMENTO
+            CreateMap<PagamentoCreateDTO, PagamentoModel>()
+                .ForMember(dest => dest.StatusPagamento, opt => opt.Ignore()) // definido no service
+                .ForMember(dest => dest.DataPagamento, opt => opt.Ignore()) // definido no service
+                .ForMember(dest => dest.DataCriacao, opt => opt.Ignore()) // definido automaticamente
+                .ForMember(dest => dest.DataAtualizacao, opt => opt.Ignore());
+
+            CreateMap<PagamentoUpdateDTO, PagamentoModel>()
+                .ForMember(dest => dest.DataAtualizacao, opt => opt.Ignore()) // definido no service
+                .ReverseMap();
+
+            CreateMap<PagamentoModel, PagamentoResponseDTO>()
+                .ForMember(dest => dest.StatusPagamento, opt => opt.MapFrom(src => src.StatusPagamento.ToString()))
+                .ForMember(dest => dest.NomeAluno, opt => opt.MapFrom(src => src.Aluno.NomeCompleto))
+                .ForMember(dest => dest.CpfAluno, opt => opt.MapFrom(src => src.Aluno.Cpf))
+                .ForMember(dest => dest.TotalParcelas, opt => opt.MapFrom(src => src.Parcelas.Count))
+                .ForMember(dest => dest.ParcelasPagas, opt => opt.MapFrom(src => src.Parcelas.Count(p => p.StatusParcela == StatusParcelaEnum.Paga)))
+                .ForMember(dest => dest.ParcelasPendentes, opt => opt.MapFrom(src => src.Parcelas.Count(p => p.StatusParcela == StatusParcelaEnum.Pendente)))
+                .ForMember(dest => dest.ParcelasVencidas, opt => opt.MapFrom(src => src.Parcelas.Count(p => p.StatusParcela == StatusParcelaEnum.Vencida || (p.DataVencimento < DateTime.Today && p.StatusParcela == StatusParcelaEnum.Pendente))))
+                .ForMember(dest => dest.ValorPago, opt => opt.MapFrom(src => src.Parcelas.Where(p => p.StatusParcela == StatusParcelaEnum.Paga).Sum(p => p.ValorPago ?? p.Valor)))
+                .ForMember(dest => dest.ValorPendente, opt => opt.MapFrom(src => src.ValorTotal - src.Parcelas.Where(p => p.StatusParcela == StatusParcelaEnum.Paga).Sum(p => p.ValorPago ?? p.Valor)));
+
+            // PARCELA MAPEAMENTO
+            CreateMap<ParcelaCreateDTO, ParcelaModel>()
+                .ForMember(dest => dest.StatusParcela, opt => opt.Ignore()) // definido no service
+                .ForMember(dest => dest.DataCriacao, opt => opt.Ignore()) // definido automaticamente
+                .ForMember(dest => dest.DataAtualizacao, opt => opt.Ignore())
+                .ForMember(dest => dest.DataPagamento, opt => opt.Ignore())
+                .ForMember(dest => dest.ValorPago, opt => opt.Ignore());
+
+            CreateMap<ParcelaUpdateDTO, ParcelaModel>()
+                .ForMember(dest => dest.DataAtualizacao, opt => opt.Ignore()) // definido no service
+                .ReverseMap();
+
+            CreateMap<ParcelaModel, ParcelaResponseDTO>()
+                .ForMember(dest => dest.StatusParcela, opt => opt.MapFrom(src => src.StatusParcela.ToString()))
+                .ForMember(dest => dest.DiasAtraso, opt => opt.MapFrom(src =>
+                    src.DataVencimento < DateTime.Today && src.StatusParcela == StatusParcelaEnum.Pendente
+                        ? (DateTime.Today - src.DataVencimento).Days
+                        : 0))
+                .ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(src => src.Valor + (src.Juros ?? 0) + (src.Multa ?? 0)))
+                .ForMember(dest => dest.EstaVencida, opt => opt.MapFrom(src =>
+                    src.DataVencimento < DateTime.Today && src.StatusParcela == StatusParcelaEnum.Pendente));
         }
     }
 }
