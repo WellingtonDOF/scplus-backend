@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend_sc.DataContext;
 
@@ -11,9 +12,11 @@ using backend_sc.DataContext;
 namespace backend_sc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250602025357_Create-Pagamento-Parcela-DB")]
+    partial class CreatePagamentoParcelaDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -179,6 +182,7 @@ namespace backend_sc.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Observacao")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");
 
@@ -299,12 +303,12 @@ namespace backend_sc.Migrations
                         {
                             Id = 1,
                             Cpf = "00000000000",
-                            DataNascimento = new DateTime(2025, 6, 2, 1, 24, 48, 978, DateTimeKind.Local).AddTicks(7460),
+                            DataNascimento = new DateTime(2025, 6, 1, 23, 53, 56, 917, DateTimeKind.Local).AddTicks(2166),
                             Email = "Default@sistema.com",
                             Endereco = "RuaDefault",
                             NomeCompleto = "AdminDefault",
                             PermissaoId = 3,
-                            Senha = "$2a$11$dzI1B6o38KLsn62Qn3X7JO9sBLzXpDI2b11EPQPTaq.WXIKT13l9O",
+                            Senha = "$2a$11$i5dEU1Pg2Wc9oGDWf1kSOuUbxGwpfzrT.t2BpXNYe3RUU10wbRFJO",
                             Status = true,
                             Telefone = "0000000000"
                         });

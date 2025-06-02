@@ -6,12 +6,15 @@ using backend_sc.Services.AulaService;
 using backend_sc.Services.AuthService;
 using backend_sc.Services.InstrutorService;
 using backend_sc.Services.MatriculaService;
+using backend_sc.Services.PagamentoService;
+using backend_sc.Services.ParcelaService;
 using backend_sc.Services.PessoaService;
 using backend_sc.Services.VeiculoService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +38,8 @@ builder.Services.AddScoped<IInstrutorInterface, InstrutorService>();
 builder.Services.AddScoped<IAulaInterface, AulaService>();
 builder.Services.AddScoped<IVeiculoInterface, VeiculoService>();
 builder.Services.AddScoped<IMatriculaInterface, MatriculaService>();
+builder.Services.AddScoped<IPagamentoInterface, PagamentoService>();
+builder.Services.AddScoped<IParcelaInterface, ParcelaService>();
 
 //Security
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
@@ -42,7 +47,7 @@ builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 //Login
 builder.Services.AddScoped<IAuthInterface, AuthService>();
 
-// JWT Authentication
+//JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"];
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 var jwtAudience = builder.Configuration["Jwt:Audience"];
@@ -102,9 +107,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
