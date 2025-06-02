@@ -20,6 +20,8 @@ namespace backend_sc.DataContext
         public DbSet<AulaModel> Aula{ get; set; }
         public DbSet<VeiculoModel> Veiculo { get; set; }
         public DbSet<MatriculaModel> Matricula { get; set; }
+        public DbSet<PagamentoModel> Pagamentos { get; set; }
+        public DbSet<ParcelaModel> Parcelas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -61,6 +63,12 @@ namespace backend_sc.DataContext
                 Status = true,
                 Senha = customPasswordHasher.Hash("admin0123")
             });
+
+            // Configuração de Pagamento
+            modelBuilder.ApplyConfiguration(new PagamentoConfiguration());
+
+            // Configuração de Parcela
+            modelBuilder.ApplyConfiguration(new ParcelaConfiguration());
         }
     }
 }
